@@ -1,4 +1,94 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+}
+
+.grid-container {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.grid-item {
+  margin: 3px 3px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border: solid 2px black;
+  padding: 5px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: all 0.15s ease-in-out;
+}
+.grid-container div:hover {
+  border-color: rgb(94, 83, 80);
+}
+
+.grid-container div:hover img {
+  filter: grayscale(0);
+}
+
+.grid-container div img {
+  width: 100%;
+  /* filter: grayscale(100%); */
+  /* border-radius: 5px; */
+  transition: all 0.3s ease-in-out;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.viewbutton {
+  background: none;
+  outline: none;
+  font-weight: 100;
+  letter-spacing: 2px;
+  border: 1px solid grey;
+  color: grey;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.viewbutton:hover {
+  transition: all 0.3s ease-in-out;
+  background: rgba(128, 128, 128, 0.7);
+  transform: scale(1.05);
+}
+a:hover {
+  font-weight: 400;
+}
+
+.grid_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  text-transform: uppercase;
+  z-index: -10;
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.grid-item:hover .grid_overlay {
+  z-index: 10;
+  /* background-color: rgba(248, 169, 140, 0.801); */
+}
+.grid-item:hover {
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.grid-item:hover img {
+  opacity: 0.3;
+  background-color: coral;
 }
